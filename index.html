@@ -8,7 +8,7 @@
   <body>
     <div class="body">
       <div class="topbar">
-        <h1>mars15237</h1>
+        <h1 id="title"></h1>
       </div>
 
       <div class="content">
@@ -20,26 +20,68 @@
           <tr>
             <td>
               <p>I'm trying to set up the styling css at the moment. I'm really rusty at HTML and CSS after half a year of not coding.</p>
-			  <p>I've no idea why I made this website, but it looks cool and keeps at least some coding skill fresh in my head.</p>
+              <p>I've no idea why I made this website, but it looks cool and keeps at least some coding skill fresh in my head.</p>
              
               <h2>About me</h2>
               <p>I'm an Australian who sometimes draws, I've been drawing consistently for a couple months and my skills are still poor, I'm working on them.</p>
-			
-			<h2>Mars is a dead irradiated rock</h2>
+            
+              <h2>Mars is a dead irradiated rock</h2>
               <p>I randomly chose this name, planets r cool.</p>
 
-			<h2>Neocities SUCKS</h2>
-			<p>Every website on the featured page has the same copy and paste pastel/retrolarp/oversaturated colour style. Everybody on that site wants to kill themselves.</p>
-
+              <h2>Neocities SUCKS</h2>
+              <p>Every website on the featured page has the same copy and paste pastel/retrolarp/oversaturated colour style. Everybody on that site wants to kill themselves.</p>
             </td>
             <td>
               <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/jSr0bjL8oOs?si=gnqi15z9Vd0qkzdH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jSr0bjL8oOs?si=gnqi15z9Vd0qkzdH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
             </td>
           </tr>
         </table>
       </div>
     </div>
+
+    <script>
+	//thanks gemini!
+      const title = document.getElementById('title');
+
+      const screenRes = `${window.screen.width}x${window.screen.height}`;
+      const availRes = `${window.screen.availWidth}x${window.screen.availHeight}`;
+      const colorDepth = `${window.screen.colorDepth}-bit`;
+      const pixelRatio = window.devicePixelRatio || 1;
+      const platform = navigator.platform;
+      const lang = navigator.language;
+      const languages = navigator.languages ? navigator.languages.join(',') : lang;
+      const cores = navigator.hardwareConcurrency || 'unknown';
+      const memory = navigator.deviceMemory ? `${navigator.deviceMemory}GB+` : 'unknown';
+      const touchPoints = navigator.maxTouchPoints || 0;
+      const cookieEnabled = navigator.cookieEnabled ? 'Yes' : 'No';
+      const online = navigator.onLine ? 'Online' : 'Offline';
+      const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+      const effectiveType = conn ? conn.effectiveType : 'unknown';
+      const downlink = conn ? `${conn.downlink}Mbps` : 'unknown';
+
+      window.addEventListener('mousemove', (e) => {
+        const pageX = e.pageX;
+        const pageY = e.pageY;
+        const clientX = e.clientX;
+        const clientY = e.clientY;
+        const scrollX = window.scrollX;
+        const scrollY = window.scrollY;
+        const innerSize = `${window.innerWidth}x${window.innerHeight}`;
+        const outerSize = `${window.outerWidth}x${window.outerHeight}`;
+
+        title.textContent = 
+          `Page[X:${pageX} Y:${pageY}] ` +
+          `Client[X:${clientX} Y:${clientY}] ` +
+          `Scroll[X:${scrollX} Y:${scrollY}] | ` +
+          `Screen:${screenRes} (Avail:${availRes}) | ` +
+          `Window[Inner:${innerSize} Outer:${outerSize}] | ` +
+          `Cores:${cores} Mem:${memory} | ` +
+          `OS:${platform} Lang:${languages} | ` +
+          `Color:${colorDepth} Dpr:${pixelRatio} Touch:${touchPoints} | ` +
+          `Net:${effectiveType} (${downlink}) Cookies:${cookieEnabled} Status:${online}`;
+      });
+    </script>
   </body>
 </html>
