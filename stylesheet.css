@@ -1,14 +1,46 @@
 body {
-  background-image: url("images/bg.gif");
-  font-family: Monapo,Mona,'MS Pgothic','MS P繧ｴ繧ｷ繝�け',IPAMonaPGothic,'IPA 繝｢繝翫� P繧ｴ繧ｷ繝�け',submona;
+  background-color: #250c04;
+  font-family: Monapo,Mona,'MS Pgothic','MS P繧ｴ繧ｷ繝け',IPAMonaPGothic,'IPA 繝｢繝翫 P繧ｴ繧ｷ繝け',submona;
 }
+
 .body {
-  background-color: #353f4f;
-  color: #ffffff;
-  margin-top: 3%;
-  margin-bottom: 5%;
-  margin-right: 5%;
-  margin-bottom: 5%;
-  margin-left: 80px;
-  padding: 3%;
+  background-image: url("images/bodybg.png");
+  margin: 0 5% 5% 80px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.topbar {
+  background-color: #371b0a;
+  padding: 1rem 3%;
+  margin: 0;
+  box-shadow: 10px 0px 10px #250c04;
+  color: #dea795;
+background-image: url("images/topbarbg.png");
+}
+
+.topbar h1 {
+  margin: 0;
+}
+
+.content {
+  padding-top: 0%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  padding-left: 2%;
+  color: #dea795;
+  }
+.site-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  box-shadow: 0px 10px 10px #250c04;
+}
+
+.site-table td {
+  width: 50%;
+  padding: 10px;
+  background-color: #542b1a;
+  vertical-align: top;
 }
