@@ -1,9 +1,10 @@
 body {
-  background-color: lightblue;
+  background-image: url("images/bg.gif");
   font-family: Monapo,Mona,'MS Pgothic','MS P繧ｴ繧ｷ繝�け',IPAMonaPGothic,'IPA 繝｢繝翫� P繧ｴ繧ｷ繝�け',submona;
 }
 .body {
-  background-color: white;
+  background-color: #353f4f;
+  color: #ffffff;
   margin-top: 3%;
   margin-bottom: 5%;
   margin-right: 5%;
