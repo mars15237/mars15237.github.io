@@ -1,9 +1,13 @@
 body {
   background-color: lightblue;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Monapo,Mona,'MS Pgothic','MS P繧ｴ繧ｷ繝�け',IPAMonaPGothic,'IPA 繝｢繝翫� P繧ｴ繧ｷ繝�け',submona;
 }
 .body {
   background-color: white;
-  margin: 10% 10%;
-  padding: 5%;
+  margin-top: 3%;
+  margin-bottom: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  margin-left: 80px;
+  padding: 3%;
 }
