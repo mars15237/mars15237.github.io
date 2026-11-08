@@ -8,7 +8,7 @@
   <body>
     <div class="body">
       <div class="topbar">
-        <h1 id="title"></h1>
+        <h1>Welkom</h1>
       </div>
 
       <div class="content">
@@ -40,47 +40,5 @@
 			<script type="text/javascript" src="https://counter.websiteout.com/js/11/0/0/1"></script>
 		</div>
     </div>
-
-    <script>
-	//thanks gemini!
-      const title = document.getElementById('title');
-      const screenRes = `${window.screen.width}x${window.screen.height}`;
-      const availRes = `${window.screen.availWidth}x${window.screen.availHeight}`;
-      const colorDepth = `${window.screen.colorDepth}-bit`;
-      const pixelRatio = window.devicePixelRatio || 1;
-      const platform = navigator.platform;
-      const lang = navigator.language;
-      const languages = navigator.languages ? navigator.languages.join(',') : lang;
-      const cores = navigator.hardwareConcurrency || 'unknown';
-      const memory = navigator.deviceMemory ? `${navigator.deviceMemory}GB+` : 'unknown';
-      const touchPoints = navigator.maxTouchPoints || 0;
-      const cookieEnabled = navigator.cookieEnabled ? 'Yes' : 'No';
-      const online = navigator.onLine ? 'Online' : 'Offline';
-      const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-      const effectiveType = conn ? conn.effectiveType : 'unknown';
-      const downlink = conn ? `${conn.downlink}Mbps` : 'unknown';
-
-      window.addEventListener('mousemove', (e) => {
-        const pageX = e.pageX;
-        const pageY = e.pageY;
-        const clientX = e.clientX;
-        const clientY = e.clientY;
-        const scrollX = window.scrollX;
-        const scrollY = window.scrollY;
-        const innerSize = `${window.innerWidth}x${window.innerHeight}`;
-        const outerSize = `${window.outerWidth}x${window.outerHeight}`;
-
-        title.textContent = 
-          `Page[X:${pageX} Y:${pageY}] ` +
-          `Client[X:${clientX} Y:${clientY}] ` +
-          `Scroll[X:${scrollX} Y:${scrollY}] | ` +
-          `Screen:${screenRes} (Avail:${availRes}) | ` +
-          `Window[Inner:${innerSize} Outer:${outerSize}] | ` +
-          `Cores:${cores} Mem:${memory} | ` +
-          `OS:${platform} Lang:${languages} | ` +
-          `Color:${colorDepth} Dpr:${pixelRatio} Touch:${touchPoints} | ` +
-          `Net:${effectiveType} (${downlink}) Cookies:${cookieEnabled} Status:${online}`;
-      });
-    </script>
   </body>
 </html>
