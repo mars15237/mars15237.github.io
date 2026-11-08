@@ -44,3 +44,8 @@ background-image: url("images/topbarbg.png");
   background-color: #542b1a;
   vertical-align: top;
 }
+#counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
