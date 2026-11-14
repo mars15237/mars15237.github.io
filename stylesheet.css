@@ -48,5 +48,20 @@ background-image: url("images/topbarbg.png");
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2%;
+  0margin-bottom: 2%;
+}
+hr {
+  border: none;
+  height: 4px;
+  background-image: linear-gradient(to bottom, #dea795, #733410);
+}
+a:link {
+  color: #db6d49;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:visited {
+  color: #bb4722;
+  background-color: transparent;
+  text-decoration: underline;
 }
